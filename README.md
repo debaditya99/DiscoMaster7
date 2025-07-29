@@ -1,39 +1,98 @@
-# DiscoMaster7 Discord Bot
+# 🎭 DiscoMaster7 (ディスコマスター7) 🎶
 
-A modular Discord bot that can be configured with various features.
+![Discord](https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 
-## Setup
+> *踊れ、歌え、楽しめ！* (Dance, Sing, Enjoy!)
 
-1. Create a `.env` file in the root directory and add your Discord bot token:
-   ```
-   DISCORD_TOKEN=your_bot_token_here
-   ```
+A groovy Discord bot that brings the vibes of a Japanese disco to your server! ✨
 
-2. Install the required packages:
-   ```
-   pip install discord.py python-dotenv
-   ```
+## 🌟 特徴 (Features)
 
-3. Run the bot:
-   ```
-   python bot.py
-   ```
+Currently featuring these disco-tastic modules:
 
-## Features
+### 🎤 Talk Module (トークモジュール)
+```
+Bring the party to life with voice interactions!
+Located in: features/Talk/Talk.py
+```
 
-The bot is designed with a modular structure where features can be added independently. Current features:
+### 🎵 Sing Module (シングモジュール)
+```
+Drop the beat with music capabilities!
+Located in: features/Sing/Sing.py
+```
 
-- Base command: `/dm7` - Checks if the bot is working
-- Feature1: `/feature1` - Example command from Feature1
-- Feature2: `/feature2` - Example command from Feature2
+### 🤖 Core Commands
+- `/dm7` - Check if DiscoMaster7 is ready to party! 
 
-## Adding New Features
+## 🎪 セットアップ (Setup)
 
-1. Create a new directory in the `features` folder
-2. Create a Python file with the same name as the directory
-3. Implement your feature using the Discord.py commands
-4. The bot will automatically load your feature on startup
+### 1️⃣ Environmental Preparation
+```bash
+# Create and activate virtual environment
+python -m venv .venv
+.\.venv\Scripts\activate  # For Windows
+```
 
-## Permissions
+### 2️⃣ Configuration
+Create a `.env` file in the root directory:
+```env
+DISCORD_TOKEN=your_bot_token_here
+```
 
-The bot is designed to work with any level of permissions. It will only use the permissions it has been granted in Discord.
+### 3️⃣ Dependencies
+```bash
+pip install discord.py python-dotenv
+```
+
+### 4️⃣ Start the Party!
+```bash
+python bot.py
+```
+
+## 🎨 モジュラー設計 (Modular Design)
+
+DiscoMaster7 features a plug-and-play modular system:
+
+```
+features/
+├── Talk/           # Voice interaction module
+└── Sing/           # Music playback module
+```
+
+## 🎯 新機能の追加 (Adding New Features)
+
+1. Create a new directory in `features/`
+2. Add your module files
+3. Implement `setup()` function
+4. The bot automatically loads your groovy new feature! ✨
+
+## 🔐 パーミッション (Permissions)
+
+DiscoMaster7 adapts to the permissions granted in your server. Grant only what you need!
+
+## 🌈 Coming Soon... 
+
+- 🎶 Music playlist management
+- 🎤 Voice effect filters
+- 🎮 Interactive DJ commands
+- 🎭 Custom event notifications
+
+## 🌟 Contributing
+
+Feel free to join the party! PRs welcome! 
+
+## 📜 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+<div align="center">
+
+🎶 Made with love by your neighborhood disco enthusiasts 🎶
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+</div>
