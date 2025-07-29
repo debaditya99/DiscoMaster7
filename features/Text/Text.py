@@ -88,9 +88,9 @@ async def get_ollama_response(prompt):
         raise Exception(f"Failed to communicate with Ollama: {str(e)}")
 
 async def setup(bot):
-    @bot.tree.command(name="talk", description="Have a conversation with the AI")
+    @bot.tree.command(name="text", description="Have a conversation with the AI")
     @app_commands.describe(content="What would you like to discuss?")
-    async def talk_command(interaction: discord.Interaction, content: str):
+    async def text_command(interaction: discord.Interaction, content: str):
         # Send initial response
         await interaction.response.send_message("Thinking...")
         message = await interaction.original_response()
@@ -130,9 +130,9 @@ async def setup(bot):
             error_message = f"Sorry, I encountered an error: {str(e)}"
             await message.edit(content=error_message)
     
-    @bot.tree.command(name="talkstream", description="Have a conversation with the AI (streaming response)")
+    @bot.tree.command(name="textstream", description="Have a conversation with the AI (streaming response)")
     @app_commands.describe(content="What would you like to discuss?")
-    async def talkstream_command(interaction: discord.Interaction, content: str):
+    async def textstream_command(interaction: discord.Interaction, content: str):
         # Send initial response
         await interaction.response.send_message("Thinking...")
         message = await interaction.original_response()

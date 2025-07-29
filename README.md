@@ -1,89 +1,152 @@
 # 🎭 DiscoMaster7 (ディスコマスター7) 🎶
 
+<div align="center">
+
+![DiscoMaster7 Banner](https://images.unsplash.com/photo-1576525865260-9f0e7cfb02b3?auto=format&fit=crop&w=800&q=80)
+
+![License](https://img.shields.io/badge/license-MIT-yellow.svg?style=for-the-badge&logo=opensourceinitiative&logoColor=white)
 ![Discord](https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![discord.py](https://img.shields.io/badge/discord.py-2.3.2-7289DA?style=for-the-badge&logo=discord&logoColor=white)
 
-> *踊れ、歌え、楽しめ！* (Dance, Sing, Enjoy!)
+*ディスコの魂を持つボット！* (A Bot with the Soul of Disco!)
 
-A groovy Discord bot that brings the vibes of a Japanese disco to your server! ✨
+</div>
+
+---
 
 ## 🌟 特徴 (Features)
 
-Currently featuring these disco-tastic modules:
+Our bot embodies the essence of Japanese disco culture with these groovy features:
 
-### 🎤 Talk Module (トークモジュール)
-```
-Bring the party to life with voice interactions!
-Located in: features/Talk/Talk.py
-```
+- **音楽** (Music)
+  - Sing Module for dropping those beats
+  - High-quality music streaming
+  - Queue management and playlist support
 
-### 🎵 Sing Module (シングモジュール)
-```
-Drop the beat with music capabilities!
-Located in: features/Sing/Sing.py
-```
+- **会話** (Communication)
+  - Talk Module for voice interactions
+  - Natural conversation flow
+  - Multi-channel support
 
-### 🤖 Core Commands
-- `/dm7` - Check if DiscoMaster7 is ready to party! 
+- **パーティー** (Party)
+  - `/dm7` command for instant party mode
+  - Real-time voice effects
+  - Interactive DJ features
 
-## 🎪 セットアップ (Setup)
+## 🚀 クイックスタート (Quick Start)
 
-### 1️⃣ Environmental Preparation
+### Installation from Source
+
+1. Clone the repository
 ```bash
-# Create and activate virtual environment
+git clone https://github.com/debaditya99/DiscoMaster7.git
+cd DiscoMaster7
+```
+
+2. Create and activate virtual environment
+```bash
 python -m venv .venv
-.\.venv\Scripts\activate  # For Windows
+# For Windows
+.\.venv\Scripts\activate
+# For Unix/MacOS
+source .venv/bin/activate
 ```
 
-### 2️⃣ Configuration
-Create a `.env` file in the root directory:
-```env
-DISCORD_TOKEN=your_bot_token_here
-```
-
-### 3️⃣ Dependencies
+3. Install dependencies
 ```bash
-pip install discord.py python-dotenv
+pip install -r requirements.txt
 ```
 
-### 4️⃣ Start the Party!
+4. Configure the bot
+```bash
+# Create .env file and add your Discord token
+echo "DISCORD_TOKEN=your_bot_token_here" > .env
+```
+
+5. Start the party!
 ```bash
 python bot.py
 ```
 
-## 🎨 モジュラー設計 (Modular Design)
+## 💫 使用方法 (Usage)
 
-DiscoMaster7 features a plug-and-play modular system:
+### Basic Operations
+
+1. **Bot Setup**
+   - Invite the bot to your server
+   - Configure permissions
+   - Use `/dm7` to verify connection
+
+2. **Music Commands**
+   - `/play` - Start the music
+   - `/queue` - Manage playlist
+   - `/skip` - Next track
+   - `/stop` - Stop the party (but why would you?)
+
+3. **Voice Features**
+   - `/join` - Bot joins your channel
+   - `/leave` - Bot leaves channel
+   - `/effect` - Apply voice effects
+
+## 🎯 プロジェクト構造 (Project Structure)
 
 ```
-features/
-├── Talk/           # Voice interaction module
-└── Sing/           # Music playback module
+DiscoMaster7/
+├── bot.py              # Main bot entry
+├── features/
+│   ├── Talk/          # Voice interaction module
+│   │   └── Talk.py    # Voice commands implementation
+│   └── Sing/          # Music module
+│       └── Sing.py    # Music playback handling
+├── requirements.txt    # Project dependencies
+└── .env               # Configuration file
 ```
 
-## 🎯 新機能の追加 (Adding New Features)
+## � 技術詳細 (Technical Details)
 
-1. Create a new directory in `features/`
-2. Add your module files
-3. Implement `setup()` function
-4. The bot automatically loads your groovy new feature! ✨
+### Dependencies
 
-## 🔐 パーミッション (Permissions)
+- **discord.py**: Discord API wrapper (v2.3.2)
+- **python-dotenv**: Environment management
+- **FFmpeg**: Audio processing
+- **PyNaCl**: Voice support
 
-DiscoMaster7 adapts to the permissions granted in your server. Grant only what you need!
+### Key Components
 
-## 🌈 Coming Soon... 
+- **DiscoMaster7Bot**: Main bot class with event handling
+- **Talk Module**: Voice channel management
+- **Sing Module**: Music playback and queue system
+- **Command Tree**: Slash command implementation
 
-- 🎶 Music playlist management
-- 🎤 Voice effect filters
+## 🎨 設計哲学 (Design Philosophy)
+
+Our bot embraces the spirit of Japanese disco:
+
+- Energetic and engaging interactions
+- Seamless music integration
+- Community-focused features
+- Reliable performance
+
+## 🌈 開発予定 (Coming Soon...)
+
+- 🎶 Advanced playlist management
+- 🎤 Custom voice effect filters
 - 🎮 Interactive DJ commands
-- 🎭 Custom event notifications
+- 🎭 Event notifications with style
+- 🌟 Multi-language support
 
-## 🌟 Contributing
+## 🤝 コントリビューション (Contributing)
 
-Feel free to join the party! PRs welcome! 
+Let's make this disco party even better! Here's how:
 
-## 📜 License
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📜 ライセンス (License)
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
@@ -91,7 +154,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 <div align="center">
 
-🎶 Made with love by your neighborhood disco enthusiasts 🎶
+Made with 💖 and 🎶 by Debaditya M.
+
+*Keep the disco spirit alive!* ✨
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
